@@ -5,13 +5,15 @@ import Botao from "../components/botao";
 import { Image, Text, View, StyleSheet } from "react-native";
 
 function Recuperar(){
+    const [email, setEmail] = React.useState(""); // Add state for email
+
     return(
     <View>
     <View>
     <Logo text="Recuperção de Senha" color="darkblue" />
     </View>
     <Text style={styles.text}>Insira seu e-mail para recuperar a senha!</Text>
-    <InputField  label="Email:" placeholder="Digite seu Email"/>
+    <InputField  label="Email:" placeholder="Digite seu Email" value={email} setValue={setEmail} /> // Add value and setValue props
     <Botao text="Recuperar" color="black" />
     </View>
 )}
